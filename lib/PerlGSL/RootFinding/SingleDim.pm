@@ -28,9 +28,9 @@ sub findroot_1d {
     %opts = ref $_[0] ? %{shift()} : @_;
   }
 
-  $opts{epsabs}    ||= 0;
-  $opts{epsrel}    ||= 1e-4;
-  $opts{max_iter}  ||= 1000;
+  $opts{epsabs} ||= 0;
+  $opts{epsrel} = 1e-4 unless defined $opts{epsrel};
+  $opts{max_iter} ||= 1000;
 
   unless (looks_like_number $xl) {
     croak "Lower limit is not a number: $xl";
