@@ -4,6 +4,7 @@ lib/PerlGSL/RootFinding/ppport.h
 lib/PerlGSL/RootFinding/SingleDim.pm
 lib/PerlGSL/RootFinding/SingleDim.xs
 MANIFEST			This list of files
-t/basic.t
-META.yml
 META.json
+META.yml
+README.pod
+t/basic.t
