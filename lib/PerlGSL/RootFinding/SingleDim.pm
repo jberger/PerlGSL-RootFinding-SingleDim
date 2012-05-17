@@ -59,7 +59,7 @@ PerlGSL::RootFinding::SingleDim - A Perlish Interface to the GSL 1D Root Finding
 
 =head1 DESCRIPTION
 
-This module is an interface to the GSL's Single Dimensional numerical root finding routines.
+This module is an interface to the GSL's Single Dimensional numerical root finding routines. So far only the "bracketing" Brent-Dekker method is implemented. 
 
 =head1 FUNCTIONS
 
@@ -96,6 +96,10 @@ The return value is the position of the root. Note that if there are multiple ro
 =head1 INSTALLATION REQUIREMENTS
 
 This module needs the GSL library installed and available. The C<PERLGSL_LIBS> environment variable may be used to pass the C<--libs> linker flags; if this is not specified, the command C<gsl-config --libs> is executed to find them. Future plans include using an L<Alien> module to provide the GSL in a more CPAN-friendly manner.
+
+=head1 FUTURE WORK
+
+Derivative methods may be added, but would require a separate closure representing the derivative of the function (unless numeric derivatives were employed). This makes such mechanisms less useful at least for now, of course, L<your contributions are always welcome|/"SOURCE REPOSITORY">!
 
 =head1 SEE ALSO
 
